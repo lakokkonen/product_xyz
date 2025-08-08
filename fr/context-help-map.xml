@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+   <appContext helpID="introduction" path="topics/introduction.html"/>
+   <appContext helpID="about_this_user_guide" path="topics/about_this_user_guide.html"/>
+   <appContext helpID="symbols_and_markings" path="topics/symbols_and_markings.html"/>
+   <appContext helpID="legal_disclaimer" path="topics/legal_disclaimer.html"/>
+   <appContext helpID="installing" path="topics/installing.html"/>
+   <appContext helpID="included_items" path="topics/included_items.html"/>
+   <appContext helpID="required_equipment" path="topics/required_equipment.html"/>
+   <appContext helpID="before_installing" path="topics/before_installing.html"/>
+   <appContext helpID="attaching_the_rotors" path="topics/attaching_the_rotors.html"/>
+   <appContext helpID="using" path="topics/using.html"/>
+   <appContext helpID="maintenance" path="topics/maintenance.html"/>
+   <appContext helpID="troubleshooting" path="topics/troubleshooting.html"/>
+   <appContext helpID="technical_data" path="topics/technical_data.html"/>
+</map>
