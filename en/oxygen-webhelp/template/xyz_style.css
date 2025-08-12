@@ -219,6 +219,10 @@ ol.searchresult .foundResult {
   background-color: var(--bs-gray-600);
 }
 
+.star {
+  filter: hue-rotate(330deg);
+}
+
 #go2top {
   z-index: 998;
 }
@@ -275,11 +279,21 @@ ol.searchresult .foundResult {
     background-color: var(--bs-tertiary-bg);
     color: var(--bs-primary);
   }
+
+  .wh-toc-tooltip {
+    display: none !important;
+  }
 }
 
 @media (max-width: 575.8px) {
   .wh_logo + .wh_publication_title {
     margin-left: 0em;
+  }
+}
+
+@media (pointer: coarse) {
+  .wh-toc-tooltip {
+    display: none !important;
   }
 }
 
