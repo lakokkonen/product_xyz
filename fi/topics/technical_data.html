@@ -26,9 +26,9 @@
       
       <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2025063009"/>
       
-      <script src="../oxygen-webhelp/app/options/properties.js?buildId=20250812190813"></script>
+      <script src="../oxygen-webhelp/app/options/properties.js?buildId=20250813125515"></script>
       <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2025063009"></script>
-      <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20250812190813"></script>
+      <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20250813125515"></script>
       <script defer="defer" src="../oxygen-webhelp/app/commons.js?buildId=2025063009"></script>
       <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2025063009"></script>
       
@@ -59,9 +59,9 @@
                      <div class=" wh_publication_title "><a href="../index.html"><span class="title">Product XYZ</span></a></div>
                      
                      </div>                
-                  <button type="button" class="btn d-flex d-md-none ms-auto me-4" id="searchButtonSmall" title="Hae" data-bs-toggle="modal" data-bs-target="#searchModal">
-                     <i class="bi bi-search"></i>
-                     <span class="d-none">Hae dokumentaatiostan</span>
+                  <button type="button" class="btn d-flex d-md-none ms-auto me-4" id="searchButtonSmall" title="Hae" data-bs-toggle="modal" data-bs-target="#searchModal" aria-labelledby="searchLabelSmall">
+                     <i class="bi bi-search" aria-hidden="true"></i>
+                     <span class="d-none" id="searchLabelSmall">Hae dokumentaatiosta</span>
                      </button>                
                   <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="offcanvas" class="navbar-toggler wh_toggle_button" aria-label="Toggle menu" aria-controls="wh_top_menu_and_indexterms_link">
                      <span class="navbar-toggler-icon"></span>
@@ -94,71 +94,72 @@
                   
                   <hr class="d-md-none border border-secondary opacity-25 my-4"/>
                   
-                  <span class="top_menu_buttons d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                  
+                  <div class="top_menu_buttons d-flex flex-column flex-md-row align-items-start align-items-md-center">
                      
-                     <button type="button" class="btn d-none d-md-flex align-items-center" id="searchButton" title="Hae" data-bs-toggle="modal" data-bs-target="#searchModal">
-                        <i class="bi bi-search"></i>
-                        <span class="d-md-none fs-4 ms-3">Hae dokumentaatiosta</span>
+                     <button type="button" class="btn d-none d-md-flex align-items-center" id="searchButton" title="Hae" data-bs-toggle="modal" data-bs-target="#searchModal" aria-labelledby="searchLabel">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <span class="d-md-none fs-4 ms-3" id="searchLabel">Hae dokumentaatiosta</span>
                         </button>   
                      
                      <div class="dropdown" id="languageSelector">
-                        <button id="languageButton" class="btn btn-lg dropdown-toggle d-flex align-items-center" type="button" title="Vaihda kieli" data-bs-toggle="dropdown" aria-expanded="false">
-                           <i class="bi bi-globe2"></i>
-                           <span class="d-md-none fs-4 ms-3">Vaihda kieli</span>
+                        <button id="languageButton" class="btn btn-lg dropdown-toggle d-flex align-items-center" type="button" title="Vaihda kieli" data-bs-toggle="dropdown" aria-expanded="false" aria-labelledby="languageLabel">
+                           <i class="bi bi-globe2" aria-hidden="true"></i>
+                           <span class="d-md-none fs-4 ms-3" id="languageLabel">Vaihda kieli</span>
                            </button>
                         
                         <ul class="dropdown-menu dropdown-menu-end">
                            
-                           <li><a id="languageLinkEN" class="dropdown-item " aria-current="false" href="../../en/topics/technical_data.html">EN</a></li>
+                           <li><a id="languageLinkEN" class="dropdown-item " aria-current="false" lang="en" aria-label="English" href="../../en/topics/technical_data.html">EN</a></li>
                            
-                           <li><a id="languageLinkDE" class="dropdown-item " aria-current="false" href="../../de/topics/technical_data.html">DE</a></li>
+                           <li><a id="languageLinkDE" class="dropdown-item " aria-current="false" lang="de" aria-label="Deutsch" href="../../de/topics/technical_data.html">DE</a></li>
                            
-                           <li><a id="languageLinkFR" class="dropdown-item " aria-current="false" href="../../fr/topics/technical_data.html">FR</a></li>
+                           <li><a id="languageLinkFR" class="dropdown-item " aria-current="false" lang="fr" aria-label="Français" href="../../fr/topics/technical_data.html">FR</a></li>
                            
-                           <li><a id="languageLinkFI" class="dropdown-item active" aria-current="page" href="../../fi/topics/technical_data.html">FI</a></li>
+                           <li><a id="languageLinkFI" class="dropdown-item active" aria-current="page" lang="fi" aria-label="Suomi" href="../../fi/topics/technical_data.html">FI</a></li>
                            </ul>
                         </div>
                      
                      
                      <div class="dropdown" id="themeSelector">
-                        <button id="bd-theme" class="btn btn-lg dropdown-toggle d-flex align-items-center" type="button" title="Vaihda väriasetus" data-bs-toggle="dropdown" aria-expanded="false">
-                           <i class="bi bi-sun-fill"></i>
-                           <span class="d-md-none fs-4 ms-3">Vaihda väriasetus</span>
+                        <button id="bd-theme" class="btn btn-lg dropdown-toggle d-flex align-items-center" type="button" title="Vaihda väriasetus" data-bs-toggle="dropdown" aria-expanded="false" aria-labelledby="themeLabel">
+                           <i class="bi bi-sun-fill" aria-hidden="true"></i>
+                           <span class="d-md-none fs-4 ms-3" id="themeLabel">Vaihda väriasetus</span>
                            </button>
                         
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme">
                            
                            <li>
                               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                                 <i class="bi bi-brightness-high-fill"></i>
+                                 <i class="bi bi-brightness-high-fill" aria-hidden="true"></i>
                                  <span class="ms-3">Light</span>
                                  </button>
                               </li>
                            
                            <li>
                               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
-                                 <i class="bi bi-moon-stars-fill"></i>
+                                 <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
                                  <span class="ms-3">Dark</span>
                                  </button>
                               </li>
                            
                            <li>
                               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-                                 <i class="bi bi-circle-half"></i>
+                                 <i class="bi bi-circle-half" aria-hidden="true"></i>
                                  <span class="ms-3">Auto</span>
                                  </button>
                               </li>
                            </ul>        
                         </div>
-                     <a class="btn d-flex align-items-center" id="pdfButton" title="Lataa PDF" href="#">
-                        <i class="bi bi-file-earmark-pdf"></i>
-                        <span class="d-md-none fs-4 ms-3">Lataa PDF</span>
+                     <a class="btn d-flex align-items-center" id="pdfButton" title="Lataa PDF" aria-labelledby="pdfLabel" href="#">
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        <span class="d-md-none fs-4 ms-3" id="pdfLabel">Lataa PDF</span>
                         </a> 
-                     <a class="btn d-flex align-items-center" id="homeButton" title="Dokumenttisivusto" href="#">
-                        <i class="bi bi-house-door"></i>
-                        <span class="fs-4 ms-3 d-md-none">Dokumenttisivusto</span>
+                     <a class="btn d-flex align-items-center" id="homeButton" title="Dokumenttisivusto" aria-labelledby="homeLabel" href="#">
+                        <i class="bi bi-house-door" aria-hidden="true"></i>
+                        <span class="fs-4 ms-3 d-md-none" id="homeLabel">Dokumenttisivusto</span>
                         </a>
-                     </span>
+                     </div>
                   
                   </div>
                </div>

@@ -27,9 +27,9 @@
       
       <link rel="stylesheet" type="text/css" href="../oxygen-webhelp/app/topic.css?buildId=2025063009"/>
       
-      <script src="../oxygen-webhelp/app/options/properties.js?buildId=20250812191014"></script>
+      <script src="../oxygen-webhelp/app/options/properties.js?buildId=20250813125411"></script>
       <script src="../oxygen-webhelp/app/localization/strings.js?buildId=2025063009"></script>
-      <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20250812191014"></script>
+      <script src="../oxygen-webhelp/app/search/index/keywords.js?buildId=20250813125411"></script>
       <script defer="defer" src="../oxygen-webhelp/app/commons.js?buildId=2025063009"></script>
       <script defer="defer" src="../oxygen-webhelp/app/topic.js?buildId=2025063009"></script>
       
@@ -60,9 +60,9 @@
                      <div class=" wh_publication_title "><a href="../index.html"><span class="title">Product XYZ</span></a></div>
                      
                      </div>                
-                  <button type="button" class="btn d-flex d-md-none ms-auto me-4" id="searchButtonSmall" title="Recherche" data-bs-toggle="modal" data-bs-target="#searchModal">
-                     <i class="bi bi-search"></i>
-                     <span class="d-none">Rechercher dans la documentationn</span>
+                  <button type="button" class="btn d-flex d-md-none ms-auto me-4" id="searchButtonSmall" title="Recherche" data-bs-toggle="modal" data-bs-target="#searchModal" aria-labelledby="searchLabelSmall">
+                     <i class="bi bi-search" aria-hidden="true"></i>
+                     <span class="d-none" id="searchLabelSmall">Rechercher dans la documentation</span>
                      </button>                
                   <button type="button" data-bs-target="#wh_top_menu_and_indexterms_link" id="wh_menu_mobile_button" data-bs-toggle="offcanvas" class="navbar-toggler wh_toggle_button" aria-label="Basculer le menu" aria-controls="wh_top_menu_and_indexterms_link">
                      <span class="navbar-toggler-icon"></span>
@@ -95,71 +95,72 @@
                   
                   <hr class="d-md-none border border-secondary opacity-25 my-4"/>
                   
-                  <span class="top_menu_buttons d-flex flex-column flex-md-row align-items-start align-items-md-center">
+                  
+                  <div class="top_menu_buttons d-flex flex-column flex-md-row align-items-start align-items-md-center">
                      
-                     <button type="button" class="btn d-none d-md-flex align-items-center" id="searchButton" title="Recherche" data-bs-toggle="modal" data-bs-target="#searchModal">
-                        <i class="bi bi-search"></i>
-                        <span class="d-md-none fs-4 ms-3">Rechercher dans la documentation</span>
+                     <button type="button" class="btn d-none d-md-flex align-items-center" id="searchButton" title="Recherche" data-bs-toggle="modal" data-bs-target="#searchModal" aria-labelledby="searchLabel">
+                        <i class="bi bi-search" aria-hidden="true"></i>
+                        <span class="d-md-none fs-4 ms-3" id="searchLabel">Rechercher dans la documentation</span>
                         </button>   
                      
                      <div class="dropdown" id="languageSelector">
-                        <button id="languageButton" class="btn btn-lg dropdown-toggle d-flex align-items-center" type="button" title="Changer de langue" data-bs-toggle="dropdown" aria-expanded="false">
-                           <i class="bi bi-globe2"></i>
-                           <span class="d-md-none fs-4 ms-3">Changer de langue</span>
+                        <button id="languageButton" class="btn btn-lg dropdown-toggle d-flex align-items-center" type="button" title="Changer de langue" data-bs-toggle="dropdown" aria-expanded="false" aria-labelledby="languageLabel">
+                           <i class="bi bi-globe2" aria-hidden="true"></i>
+                           <span class="d-md-none fs-4 ms-3" id="languageLabel">Changer de langue</span>
                            </button>
                         
                         <ul class="dropdown-menu dropdown-menu-end">
                            
-                           <li><a id="languageLinkEN" class="dropdown-item " aria-current="false" href="../../en/topics/symbols_and_markings.html">EN</a></li>
+                           <li><a id="languageLinkEN" class="dropdown-item " aria-current="false" lang="en" aria-label="English" href="../../en/topics/symbols_and_markings.html">EN</a></li>
                            
-                           <li><a id="languageLinkDE" class="dropdown-item " aria-current="false" href="../../de/topics/symbols_and_markings.html">DE</a></li>
+                           <li><a id="languageLinkDE" class="dropdown-item " aria-current="false" lang="de" aria-label="Deutsch" href="../../de/topics/symbols_and_markings.html">DE</a></li>
                            
-                           <li><a id="languageLinkFR" class="dropdown-item active" aria-current="page" href="../../fr/topics/symbols_and_markings.html">FR</a></li>
+                           <li><a id="languageLinkFR" class="dropdown-item active" aria-current="page" lang="fr" aria-label="Français" href="../../fr/topics/symbols_and_markings.html">FR</a></li>
                            
-                           <li><a id="languageLinkFI" class="dropdown-item " aria-current="false" href="../../fi/topics/symbols_and_markings.html">FI</a></li>
+                           <li><a id="languageLinkFI" class="dropdown-item " aria-current="false" lang="fi" aria-label="Suomi" href="../../fi/topics/symbols_and_markings.html">FI</a></li>
                            </ul>
                         </div>
                      
                      
                      <div class="dropdown" id="themeSelector">
-                        <button id="bd-theme" class="btn btn-lg dropdown-toggle d-flex align-items-center" type="button" title="Changer le thème de couleur" data-bs-toggle="dropdown" aria-expanded="false">
-                           <i class="bi bi-sun-fill"></i>
-                           <span class="d-md-none fs-4 ms-3">Changer le thème de couleur</span>
+                        <button id="bd-theme" class="btn btn-lg dropdown-toggle d-flex align-items-center" type="button" title="Changer le thème de couleur" data-bs-toggle="dropdown" aria-expanded="false" aria-labelledby="themeLabel">
+                           <i class="bi bi-sun-fill" aria-hidden="true"></i>
+                           <span class="d-md-none fs-4 ms-3" id="themeLabel">Changer le thème de couleur</span>
                            </button>
                         
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme">
                            
                            <li>
                               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
-                                 <i class="bi bi-brightness-high-fill"></i>
+                                 <i class="bi bi-brightness-high-fill" aria-hidden="true"></i>
                                  <span class="ms-3">Light</span>
                                  </button>
                               </li>
                            
                            <li>
                               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
-                                 <i class="bi bi-moon-stars-fill"></i>
+                                 <i class="bi bi-moon-stars-fill" aria-hidden="true"></i>
                                  <span class="ms-3">Dark</span>
                                  </button>
                               </li>
                            
                            <li>
                               <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto">
-                                 <i class="bi bi-circle-half"></i>
+                                 <i class="bi bi-circle-half" aria-hidden="true"></i>
                                  <span class="ms-3">Auto</span>
                                  </button>
                               </li>
                            </ul>        
                         </div>
-                     <a class="btn d-flex align-items-center" id="pdfButton" title="Télécharger le PDF" href="#">
-                        <i class="bi bi-file-earmark-pdf"></i>
-                        <span class="d-md-none fs-4 ms-3">Télécharger le PDF</span>
+                     <a class="btn d-flex align-items-center" id="pdfButton" title="Télécharger le PDF" aria-labelledby="pdfLabel" href="#">
+                        <i class="bi bi-file-earmark-pdf" aria-hidden="true"></i>
+                        <span class="d-md-none fs-4 ms-3" id="pdfLabel">Télécharger le PDF</span>
                         </a> 
-                     <a class="btn d-flex align-items-center" id="homeButton" title="Portail de documents" href="#">
-                        <i class="bi bi-house-door"></i>
-                        <span class="fs-4 ms-3 d-md-none">Portail de documents</span>
+                     <a class="btn d-flex align-items-center" id="homeButton" title="Portail de documents" aria-labelledby="homeLabel" href="#">
+                        <i class="bi bi-house-door" aria-hidden="true"></i>
+                        <span class="fs-4 ms-3 d-md-none" id="homeLabel">Portail de documents</span>
                         </a>
-                     </span>
+                     </div>
                   
                   </div>
                </div>
